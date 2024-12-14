@@ -1,0 +1,17 @@
+<div th:fragment="delete" class="modal fade" th:id="staticBackdrop+${professor.id}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Excluir Registro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h5>Deseja excluir o professor #<span th:text="${professor.id}"></span>?</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                <a th:href="@{/professores/{professorId}/delete(professorId=${professor.id})}" class="btn btn-danger">Sim</a>
+            </div>
+        </div>
+    </div>
+</div>
